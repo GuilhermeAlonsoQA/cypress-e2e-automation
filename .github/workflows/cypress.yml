@@ -1,0 +1,25 @@
+name: Cypress Tests
+
+# Roda os testes automaticamente a cada push ou pull request na branch main
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do codigo
+        uses: actions/checkout@v4
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Rodar testes Cypress
+        uses: cypress-io/github-action@v6
+        with:
+          browser: chrome
