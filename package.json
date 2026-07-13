@@ -1,0 +1,12 @@
+{
+  "name": "cypress-e2e-automation",
+  "version": "1.0.0",
+  "description": "Suite de testes E2E com Cypress, usando o padrao Page Object Model, cobrindo login, busca de produto, carrinho e checkout.",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^13.6.0"
+  }
+}
